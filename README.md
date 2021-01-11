@@ -1,4 +1,4 @@
-# simple
+# simple - Vue application with Rete.js
 
 ## Project setup
 
@@ -18,6 +18,10 @@ npm i
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+```
+### Open in browser
+```
+http://localhost:8080/
 ```
 
 ### Compiles and minifies for production
