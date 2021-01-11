@@ -1,8 +1,18 @@
 # simple
 
 ## Project setup
+
+### Clone repository
 ```
-npm install
+git clone https://github.com/Hatead1/simple-rete-vue-app
+```
+### Change directory
+```
+cd simple-rete-vue-app/
+```
+### Install npm modules
+```
+npm i
 ```
 
 ### Compiles and hot-reloads for development
