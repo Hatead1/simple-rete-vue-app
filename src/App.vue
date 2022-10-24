@@ -18,4 +18,12 @@ export default {
 <style>
 #app {
 }
+.node.selected {
+    background: #D22B1E !important;
+    border-color: #e783b0 !important;
+}
+.node {
+    background: #0039A6 !important;
+    border-color: #b3a4eb !important;
+}
 </style>
