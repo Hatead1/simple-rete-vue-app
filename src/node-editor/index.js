@@ -22,8 +22,8 @@ export default async function (container) {
     engine.register(c);
   });
 
-  var n1 = await components[0].createNode({ num: 22 });
-  var n2 = await components[0].createNode({ num: 33 });
+  var n1 = await components[0].createNode({ numm: 22 });
+  var n2 = await components[0].createNode({ numm: 33 });
   var add = await components[1].createNode();
 
   n1.position = [80, 200];
@@ -34,7 +34,7 @@ export default async function (container) {
   editor.addNode(n2);
   editor.addNode(add);
 
-  editor.connect(n1.outputs.get("num"), add.inputs.get("num"));
+  editor.connect(n1.outputs.get("num"), add.inputs.get("num1"));
   editor.connect(n2.outputs.get("num"), add.inputs.get("num2"));
 
   editor.on(
