@@ -6,12 +6,12 @@ export class AddComponent extends Rete.Component {
     constructor(){ super("Add"); }
 
     builder(node) {
-        var inp1 = new Rete.Input('num',"Number", NumSocket);
-        var inp2 = new Rete.Input('num2', "Number2", NumSocket);
-        var out = new Rete.Output('res', "Number", NumSocket);
+        var inp1 = new Rete.Input('num1',"Number 1", NumSocket);
+        var inp2 = new Rete.Input('num2', "Number 2", NumSocket);
+        var out = new Rete.Output('res', "Result", NumSocket);
 
-        inp1.addControl(new NumControl(this.editor, 'num'))
-        inp2.addControl(new NumControl(this.editor, 'num2'))
+        inp1.addControl(new NumControl(this.editor, 'numm1'))
+        inp2.addControl(new NumControl(this.editor, 'numm2'))
 
         return node
             .addInput(inp1)
@@ -21,8 +21,8 @@ export class AddComponent extends Rete.Component {
     }
 
     worker(node, inputs, outputs) {
-        var n1 = inputs['num'].length?inputs['num'][0]:node.data.num1;
-        var n2 = inputs['num2'].length?inputs['num2'][0]:node.data.num2;
+        var n1 = inputs['num1'].length?inputs['num1'][0]:node.data.numm1;
+        var n2 = inputs['num2'].length?inputs['num2'][0]:node.data.numm2;
         var sum = n1 + n2;
         
         this.editor.nodes.find(n => n.id == node.id).controls.get('preview').setValue(sum);
